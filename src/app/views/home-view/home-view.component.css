@@ -4,6 +4,7 @@ html,body{
 }
 
 .mouse-position-getter{
+    position: absolute;
     width: 100vw;
     min-height: 100vh;
 }
@@ -12,4 +13,5 @@ html,body{
     width: 100vw;
     min-height: 100vh;
     z-index: 2;
+    backdrop-filter: blur(60px);
 }

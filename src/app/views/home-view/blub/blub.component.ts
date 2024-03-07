@@ -16,8 +16,11 @@ export class BlubComponent {
 
   ngOnChanges() {
     if (this.bulb && this.mouseCoor) {
-      this.bulb.nativeElement.style.left = `${this.mouseCoor.x}px`;
-      this.bulb.nativeElement.style.top = `${this.mouseCoor.y}px`;
+      this.bulb.nativeElement.animate({
+        left:`${this.mouseCoor.x}px` ,
+        top: `${this.mouseCoor.y}px`
+      },{ duration: 3000, fill: "forwards"}) ;
+      //this.bulb.nativeElement.style.top = `${this.mouseCoor.y}px`;
     }
   }
 
