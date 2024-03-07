@@ -1,0 +1,8 @@
+.blub{
+    position: absolute;
+    height: 4rem;
+    aspect-ratio: 1/1;
+    background-color: beige;
+    border-radius: 50%;
+    z-index: 3;
+}

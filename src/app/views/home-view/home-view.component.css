@@ -1,0 +1,15 @@
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+.mouse-position-getter{
+    width: 100vw;
+    min-height: 100vh;
+}
+.blured-background{
+    position: absolute;
+    width: 100vw;
+    min-height: 100vh;
+    z-index: 2;
+}
