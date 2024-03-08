@@ -1,4 +1,6 @@
-pre{
-    position: absolute;
+.container{
     z-index: 3;
+    display: flex;
+    justify-content: center;
+    position: absolute;
 }
