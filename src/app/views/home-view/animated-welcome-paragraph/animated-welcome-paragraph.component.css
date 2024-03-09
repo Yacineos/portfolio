@@ -1,6 +1,12 @@
-.container{
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:wght@500&display=swap');
+
+.animated-text{
     z-index: 3;
-    display: flex;
-    justify-content: center;
     position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+    font-size: 8rem;
 }

@@ -8,4 +8,9 @@ import { Component, Input, input } from '@angular/core';
   styleUrl: './animated-welcome-paragraph.component.css'
 })
 export class AnimatedWelcomeParagraphComponent {
+  bonjourText: string = "BONJOUR";
+  yacineText: string = "C'EST YACINE";
+  shuffleParagraph(){
+
+  }
 }

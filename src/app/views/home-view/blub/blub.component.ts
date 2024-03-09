@@ -10,18 +10,18 @@ import {
   EffectRef,
 } from '@angular/core';
 import { Coor } from '../../../core/models/types';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-blub',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './blub.component.html',
   styleUrl: './blub.component.css',
 })
 export class BlubComponent implements AfterViewInit, OnDestroy {
-  @ViewChild('blub') bulb!: ElementRef;
 
-  @Input({ required: true }) color!: string;
+  @ViewChild('blub') bulb!: ElementRef;
 
   private _sigMouse = signal<Coor>({ x: 0, y: 0 });
   @Input()
@@ -32,7 +32,10 @@ export class BlubComponent implements AfterViewInit, OnDestroy {
     this._sigMouse.set(c);
   }
 
+  @Input({required: true}) isTouchScreen : boolean = false ;
+
   private effectRef?: EffectRef;
+
   ngOnDestroy(): void {
       this.effectRef?.destroy()
   }
@@ -42,7 +45,7 @@ export class BlubComponent implements AfterViewInit, OnDestroy {
 
   constructor() {
     this.effectRef = effect(() => {
-      if (this.bulb && this.mouseCoor) {
+      if (this.bulb && this.mouseCoor && !this.isTouchScreen) {
         this.bulb.nativeElement.animate(
           {
             left: `${this.mouseCoor.x}px`,
@@ -50,8 +53,12 @@ export class BlubComponent implements AfterViewInit, OnDestroy {
           },
           { duration: 3000 , fill:"forwards" }
         );
-        //this.bulb.nativeElement.style.top = `${this.mouseCoor.y}px`;
       }
     });
+ 
+  }
+
+  touchScreen(){
+    return this.isTouchScreen;
   }
 }

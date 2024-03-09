@@ -13,5 +13,5 @@ html,body{
     width: 100vw;
     min-height: 100vh;
     z-index: 2;
-    backdrop-filter: blur(60px);
+    backdrop-filter: blur(250px);
 }
