@@ -1,1 +1,4 @@
-<app-home-view/>
+<div [class.dark-mode]="sigDarkMode()">
+    <app-home-view/>
+    <app-theme-toggle-button></app-theme-toggle-button>
+</div>

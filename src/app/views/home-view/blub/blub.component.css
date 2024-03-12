@@ -27,6 +27,15 @@
 
 @media (max-width: 768px) {
     .blub {
-      height: 20rem; /* Adjust the height for smaller screens */
+      height: 14rem; /* Adjust the height for smaller screens */
+      position: absolute;
+      height: 35rem;
+      aspect-ratio: 1/1;
+      background: linear-gradient(to right, #84ffc9, #aab2ff, #eca0ff);
+      border-radius: 50%;
+      left: 50%;
+      top: 50%;
+      translate: -50% -50%;
+      z-index: 1;
     }
   }

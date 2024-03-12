@@ -8,6 +8,7 @@ import {
   effect,
   OnDestroy,
   EffectRef,
+  ChangeDetectionStrategy,
 } from '@angular/core';
 import { Coor } from '../../../core/models/types';
 import { CommonModule } from '@angular/common';
@@ -18,6 +19,7 @@ import { CommonModule } from '@angular/common';
   imports: [CommonModule],
   templateUrl: './blub.component.html',
   styleUrl: './blub.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class BlubComponent implements AfterViewInit, OnDestroy {
 

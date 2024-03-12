@@ -2,8 +2,6 @@
 html,body{
     min-width: 100vw;
     min-height: 100vh;
-    color: white;
-    background-color: black;
     margin: 0;
     overflow: hidden;
 }
