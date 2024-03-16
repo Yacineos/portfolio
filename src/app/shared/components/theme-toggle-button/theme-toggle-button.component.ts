@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AppearanceService } from '../../services/appearance.service';
 
 @Component({
   selector: 'app-theme-toggle-button',
@@ -9,4 +10,11 @@ import { Component } from '@angular/core';
 })
 export class ThemeToggleButtonComponent {
 
+  constructor(private appearanceService:AppearanceService){
+
+  }
+
+  toggleTheme(){
+    this.appearanceService.toggleTheme()
+  }
 }

@@ -1,5 +1,6 @@
 # TODO
-    * button light mode / dark mode 
+    * create the mobile navbar  
+    * button light mode / dark mode
     * find a good font
     * create the projects view ( isn't possible in the same page I guess)
 # BLOCKED
@@ -15,6 +16,8 @@
     * add the shuffle/hacker effect in the welcome text (shuffeling first time on the landing (and every time on hover ) )
         * shuffle working but if hovering a lot craetes a bug -> need to limit it to can't hover until my function finishes 
     * bulb on mobile ( iphone SE ) is too big 
+    15/03 ---------------------
+    * fixed bulb mobile -> reduced blur (too dark) 
 
 # DOING
     

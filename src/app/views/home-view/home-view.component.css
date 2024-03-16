@@ -10,3 +10,13 @@
     z-index: 2;
     backdrop-filter: blur(250px);
 }
+
+@media (max-width: 768px) {
+    .blured-background{
+        position: absolute;
+        width: 100vw;
+        min-height: 100vh;
+        z-index: 2;
+        backdrop-filter: blur(40px);
+    }
+}
