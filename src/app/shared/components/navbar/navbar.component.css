@@ -12,7 +12,33 @@
 }
 
 .element{
-    padding: 1rem;
+    padding: 1rem 0rem;
     font-size: 20px;
     font-family: "Space Mono", monospace;
+    background-color: black;
+    border-radius: 35%;
 }
+
+@media (max-width: 768px) {
+    .container{
+        top: 1rem;
+        position: fixed;
+        width: 20rem;
+        z-index: 6;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        left: 50%;
+        translate: -50%;
+        backdrop-filter: blur(250px);
+    }
+
+    .element{
+        padding: 1rem 0rem;
+        font-size: 1rem;
+        font-family: "Space Mono", monospace;
+        background-color: black;
+        border-radius: 35%;
+    }
+}
+
