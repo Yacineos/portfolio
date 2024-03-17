@@ -29,7 +29,7 @@
     .blub {
       position: absolute;
       aspect-ratio: 1/1;
-      height: 20rem; /* Adjust the height for smaller screens */
+      height: 15rem; /* Adjust the height for smaller screens */
       background: linear-gradient(to right, #84ffc9, #aab2ff, #eca0ff);
       border-radius: 50%;
       left: 50%;
