@@ -1,5 +1,6 @@
 # TODO
-    * create the mobile navbar  
+    * create the mobile navbar
+        * inspiration for buttons animation on desktop  
     * button light mode / dark mode
     * find a good font
     * create the projects view ( isn't possible in the same page I guess)
