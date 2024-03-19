@@ -1,7 +1,7 @@
-<div class="container">
-    <div class="element">Acceuil</div>
-    <div class="element">Projets</div>
+<div class="container" >
+    <div class="element" [ngClass]="sigIsDark() ? 'dark-element' : 'white-element'" >Acceuil</div>
+    <div class="element" [ngClass]="sigIsDark() ? 'dark-element' : 'white-element'" >Projets</div>
     <!-- <div>Blog</div>
     <div>Biographie</div> -->
-    <div class="element">Contact</div>
+    <div class="element" [ngClass]="sigIsDark() ? 'dark-element' : 'white-element'" >Contact</div>
 </div>
