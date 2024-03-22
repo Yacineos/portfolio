@@ -24,6 +24,10 @@ export const routes: Routes = [
         loadComponent: () => import('./views/blog/blog.component').then(m => m.BlogComponent)
     },
     {
+        path: 'auth',
+        loadComponent: () => import('./views/auth/auth.component').then(m => m.AuthComponent)
+    },
+    {
         path:'**',
         component: PageNotFoundComponent
     }
