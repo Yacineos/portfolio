@@ -4,6 +4,8 @@
     * button light mode / dark mode
     * find a good font
     * create the projects view ( isn't possible in the same page I guess)
+    * add english/french 
+    * a bad ass 404 not found mini game
 # BLOCKED
     * failed to add jest to implement tests
 # DONE
