@@ -1,7 +1,7 @@
 <div class="container" >
-    <div class="element" [ngClass]="sigIsDark() ? 'dark-element' : 'white-element'" >Acceuil</div>
-    <div class="element" [ngClass]="sigIsDark() ? 'dark-element' : 'white-element'" >Projets</div>
+    <div routerLink="" class="element" [ngClass]="sigIsDark() ? 'dark-element' : 'white-element'" >Acceuil</div>
+    <div routerLink="projects" class="element" [ngClass]="sigIsDark() ? 'dark-element' : 'white-element'" >Projets</div>
     <!-- <div>Blog</div>
     <div>Biographie</div> -->
-    <div class="element" [ngClass]="sigIsDark() ? 'dark-element' : 'white-element'" >Contact</div>
+    <div routerLink="contact" class="element" [ngClass]="sigIsDark() ? 'dark-element' : 'white-element'" >Contact</div>
 </div>

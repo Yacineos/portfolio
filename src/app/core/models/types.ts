@@ -4,7 +4,7 @@ export type Coor = {
 }
 
 export type Post = {
-    id : number,
+    id : string,
     title : string,
     content : string,
     date : string

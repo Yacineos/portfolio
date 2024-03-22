@@ -1,3 +1,14 @@
 <pre>
     {{blogService.sigPosts() | json}} 
+    <li *ngFor="let post of blogService.sigPosts()">
+        {{post.title}}          <button (click)="delete(post)">delete prrr</button>
+
+
+        {{post.content}}
+
+        
+    </li>
+    <input #title type="text" [ngModel]="sigPost().title"/>
+    <input #content type="text" [ngModel]="sigPost().content"/>
+    <button (click)="newPost(title.value,content.value)">add new post</button>
 </pre>

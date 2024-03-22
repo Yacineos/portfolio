@@ -18,7 +18,7 @@ export class BlogService {
     this.getAllPosts();
   }
   async getAllPosts(){
-    
+
     let { data: blogs, error } = await this.supabase
                                       .from('blogs')
                                       .select('*')
@@ -40,5 +40,20 @@ export class BlogService {
     return this.supabase.from(this.tableName).upsert(update)
   }
 
+  async addPost(post: Post){
+    const postsWithTheOneWeJustAdded = await this.supabase.from(this.tableName)
+                                                          .insert([ 
+                                                              {title: post.title, content: post.content, created_at: post.date}
+                                                            ])
+                                                          .select();
+
+    this._sigPosts.update((sg) => sg.concat(postsWithTheOneWeJustAdded.data as Post[]));
+  }
+
+  async deleteRow(post: Post){
+    await this.supabase.from(this.tableName)
+                       .delete()
+                       .eq('id',post.id)
+  }
 
 }

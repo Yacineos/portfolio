@@ -1,4 +1,4 @@
-import { Component, Input, computed, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, computed, signal } from '@angular/core';
 import { AppearanceService } from '../../services/appearance.service';
 import { CommonModule } from '@angular/common';
 
@@ -7,7 +7,8 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './theme-toggle-button.component.html',
-  styleUrl: './theme-toggle-button.component.css'
+  styleUrl: './theme-toggle-button.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ThemeToggleButtonComponent {
   

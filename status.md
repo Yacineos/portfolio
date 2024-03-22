@@ -21,6 +21,9 @@
     * bulb on mobile ( iphone SE ) is too big 
     15/03 ---------------------
     * fixed bulb mobile -> reduced blur (too dark) 
+    22/03 ---------------------
+    * debut with the supabase service , found this weird bug using angular 17 with supabase : https://github.com/supabase/supabase-js/issues/936
+    
 
 # DOING
     

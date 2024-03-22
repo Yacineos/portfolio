@@ -1,13 +1,13 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  selector: 'app-projects-view',
+  selector: 'app-contact',
   standalone: true,
   imports: [],
-  templateUrl: './projects-view.component.html',
-  styleUrl: './projects-view.component.css',
+  templateUrl: './contact.component.html',
+  styleUrl: './contact.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ProjectsViewComponent {
+export class ContactComponent {
 
 }
