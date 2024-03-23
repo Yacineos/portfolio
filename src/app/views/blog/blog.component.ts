@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 import { BlogService } from '../../shared/services/blog.service';
 import { CommonModule } from '@angular/common';
-import { Post } from '../../core/models/types';
+import { Post } from '../../core/models/post';
 import { FormsModule } from '@angular/forms';
 
 @Component({

@@ -10,7 +10,7 @@ import {
   EffectRef,
   ChangeDetectionStrategy,
 } from '@angular/core';
-import { Coor } from '../../../core/models/types';
+import { Coor } from '../../../core/models/coor';
 import { CommonModule } from '@angular/common';
 
 @Component({

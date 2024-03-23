@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component, HostListener, computed, signal } fr
 import { AnimatedWelcomeParagraphComponent } from './animated-welcome-paragraph/animated-welcome-paragraph.component';
 import { BlubComponent } from './blub/blub.component';
 import { MouseTrackingService } from '../../shared/services/mouse-tracking.service';
-import { Coor } from '../../core/models/types';
+import { Coor } from '../../core/models/coor';
 
 @Component({
     selector: 'app-home-view',

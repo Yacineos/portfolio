@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Coor } from '../../core/models/types';
+import { Coor } from '../../core/models/coor';
 
 @Injectable({
   providedIn: 'root'
