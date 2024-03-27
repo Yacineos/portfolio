@@ -4,7 +4,6 @@ import { Post } from "../models/post";
 
 /*
     interface that will handle :
-        - the blog state
         - accessing supabase relational DB ( refer to https://supabase.com/ )
         - CRUD operations with a given table name 
 */

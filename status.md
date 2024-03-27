@@ -1,4 +1,5 @@
 # TODO
+    * add jest to implement service tests + 
     * create the mobile navbar
         * inspiration for buttons animation on desktop  
     * button light mode / dark mode
@@ -7,7 +8,7 @@
     * add english/french 
     * a bad ass 404 not found mini game
 # BLOCKED
-    * failed to add jest to implement tests
+    * 
 # DONE
     * set up the project
     * implement bulb following cursor

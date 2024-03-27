@@ -19,7 +19,7 @@ export class BlogComponent {
     content: "dsfds ",
     date: ""
   });
-  constructor(protected blogService: BlogService){
+  constructor(protected blogService: BlogService ){
 
   }
   newPost(title: string , content: string){

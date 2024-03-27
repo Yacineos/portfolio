@@ -2,8 +2,11 @@ import { PostgrestSingleResponse, SupabaseClient, createClient } from "@supabase
 import { SupabaseBlogRepository } from "../ports/supabase-blog-repository";
 import { environment } from "../../environment";
 import { Post, toPost } from "../models/post";
+import { Injectable } from "@angular/core";
 
-
+@Injectable({
+    providedIn:"root"
+})
 export class SupabaseBlogRepositoryImpl extends SupabaseBlogRepository{
     
     readonly supabase: SupabaseClient = createClient(environment.supabaseUrl, environment.supabaseKey);
