@@ -3,7 +3,7 @@ import { PostgrestSingleResponse, SupabaseClient, createClient } from '@supabase
 import { environment } from '../../environment';
 import { Post } from '../../core/models/post';
 import { SupabaseBlogRepositoryImpl } from '../../core/adapters/supabase-blog-repo-impl';
-import { blogStateMangementImpl } from '../../core/adapters/blog-state-management-impl';
+import { BlogStateMangementImpl } from '../../core/adapters/blog-state-management-impl';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +14,7 @@ export class BlogService {
 
   constructor(  
     private dbAccesser : SupabaseBlogRepositoryImpl , 
-    private blogState : blogStateMangementImpl 
+    private blogState : BlogStateMangementImpl 
   ){
     this.sigPosts = computed<Post[]>(() => blogState.sigPosts());
     this.getAllPosts();

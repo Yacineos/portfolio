@@ -10,7 +10,7 @@ import { Post } from "../models/post";
         - it should offer a delete post methode 
 */
 
-export abstract class blogStateMangement {
+export abstract class BlogStateMangement {
     
     /*
         signal that holds the state of the posts 
