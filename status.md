@@ -1,14 +1,17 @@
 # TODO
-    * add jest to implement service tests + 
+    * create the projects view (find a solution for mobile) 
+        * place some tiles on the screen randomly ( mobile ??)
+        * double click effect
+        * drag effect 
+        * teach users ?!
     * create the mobile navbar
         * inspiration for buttons animation on desktop  
     * button light mode / dark mode
     * find a good font
-    * create the projects view ( isn't possible in the same page I guess)
     * add english/french 
     * a bad ass 404 not found mini game
 # BLOCKED
-    * 
+    * add jest to implement service tests  
 # DONE
     * set up the project
     * implement bulb following cursor

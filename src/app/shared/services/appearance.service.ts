@@ -5,7 +5,7 @@ import { Injectable, computed, signal } from '@angular/core';
 })
 export class AppearanceService {
 
-  private readonly _sigDarkMode = signal<boolean>(true);
+  private readonly _sigDarkMode = signal<boolean>(false);
   readonly sigDarkMode = computed<boolean>(() => this._sigDarkMode());
 
   toggleTheme(){

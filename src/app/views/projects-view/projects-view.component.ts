@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { AppearanceService } from '../../shared/services/appearance.service';
 
 @Component({
   selector: 'app-projects-view',

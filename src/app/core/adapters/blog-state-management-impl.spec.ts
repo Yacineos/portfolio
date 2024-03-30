@@ -3,6 +3,7 @@ import { BlogStateMangementImpl } from './blog-state-management-impl';
 import { Post, mockPost } from '../models/post';
 
 describe('blogStateManagementImplementation', () => {
+    
   let blogStateManagementImplementation: BlogStateMangementImpl;
 
   beforeEach(() => {
@@ -18,6 +19,7 @@ describe('blogStateManagementImplementation', () => {
   });
 
   describe('setPosts', () => {
+
     it('correctly sets the current state of the sigPosts signal to empty', () => {
         blogStateManagementImplementation.setPosts([]);
         const result = blogStateManagementImplementation.sigPosts();
