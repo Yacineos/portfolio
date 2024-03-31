@@ -9,7 +9,7 @@
     * button light mode / dark mode
     * find a good font
     * add english/french 
-    * a bad ass 404 not found mini game
+    * a bad ass 404 not found mini game ( avoid the projectiles ? every level increase projectiles speed and frequency )
 # BLOCKED
     * add jest to implement service tests  
 # DONE
