@@ -19,10 +19,11 @@
     padding: 0.5rem 0.5rem;
     font-size: 1.5rem;
     font-family: "Space Mono", monospace;
-    border-radius: 7px;
+    transition: font-size 0.3s ease; /* Add this line */
 }
 .element:hover{
     cursor: pointer;
+    font-size: 1.6rem;
 }
 
 @media (max-width: 768px) {
