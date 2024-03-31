@@ -1,9 +1,30 @@
 .theme-button{
-    position: absolute;
-    right: 1rem;
-    top: 90vh;
     z-index: 6;
     background-color: transparent;
-    width: 2rem;
 }
 
+.element{
+    width: 30px; height: 30px;
+    transition: width 0.3s ease; /* Add this line */
+    transition: height 0.3s ease; /* Add this line */
+}
+
+.element:hover{
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+}
+
+@media (max-width: 768px) {
+    .element{
+        width: 20px;
+        height: 20px;
+    }
+}
+.sun{
+    fill: black;
+}
+
+.moon{
+    fill: white; 
+}
