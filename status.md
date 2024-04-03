@@ -10,6 +10,7 @@
     * find a good font
     * add english/french 
     * a bad ass 404 not found mini game ( avoid the projectiles ? every level increase projectiles speed and frequency )
+        * define Velocity type 
 # BLOCKED
     * add jest to implement service tests  
 # DONE

@@ -6,11 +6,17 @@ describe('GameService', () => {
   let service: GameService;
 
   beforeEach(() => {
-    TestBed.configureTestingModule({});
+    TestBed.configureTestingModule({
+      providers:[GameService]
+    });
     service = TestBed.inject(GameService);
   });
 
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
+
+  describe('inflict damage method', ()=> {
+    it('should ')
+  })
 });
