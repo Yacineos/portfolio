@@ -1,6 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 
 import { GameService } from './game.service';
+import { Health } from '../../../core/models/game';
 
 describe('GameService', () => {
   let service: GameService;
@@ -17,6 +18,17 @@ describe('GameService', () => {
   });
 
   describe('inflict damage method', ()=> {
-    it('should ')
-  })
+    it('should not inflict damage if the player have no health left ', ()=>{
+      service.setHealth(0 as Health);
+      expect(() => {
+        service.inflictDamage();
+      }).toThrowError();
+    });
+
+    it('should inflict projectile damaage', ()=> {
+      service.setHealth(50 as Health);
+      service.inflictDamage()
+      expect(service.sigGameState().health).toEqual(0);
+    })
+  });
 });

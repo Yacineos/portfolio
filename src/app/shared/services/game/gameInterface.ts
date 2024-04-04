@@ -1,5 +1,5 @@
 import { Signal } from "@angular/core";
-import { Difficulty, GameState, Position } from "../../../core/models/game";
+import { Difficulty, GameState, Health, Position } from "../../../core/models/game";
 
 /* ---------------------------------------------------------------------------------------
     Projectile Game is an action-packed game where players must dodge
@@ -44,6 +44,9 @@ export interface GameInterface {
      * saves the current score to the highScore attribute if score > highScore 
      */
     setHighScore(): void ;
+
+    
+    setHealth(health: Health): void ;
 
     
 
