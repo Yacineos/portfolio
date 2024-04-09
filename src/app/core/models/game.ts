@@ -1,5 +1,5 @@
 export type GameState = {
-    playerPosition: Position,
+    playerPosition: number, // player distance from the left border of the screen 
     score : number ,
     // timer : number ,
     highScore : number ,
@@ -9,8 +9,7 @@ export type GameState = {
     lost : boolean 
 }
 
-// player distance from the left border of the screen 
-export type Position = `${number}px`;
+
 
 export enum Difficulty {
     easy,
@@ -18,15 +17,20 @@ export enum Difficulty {
     hard,
 } 
 
-export type Velocity = number ;
+export enum Velocity {
+    Slow = 5,
+    Medium = 10,
+    Fast = 15,
+    Light = 30 ,
+};
 
 
 export const projectileDamage = 50 ;
 
 // the player need to be touched X time to lose : 
-export const easyModeHealth = 4 * projectileDamage ; // 4 times 
-export const normalModeHealth = 2 * projectileDamage ; // 2 times 
-export const hardModeHealth = 1 * projectileDamage ; // 1 time 
+export const easyModeHealth : Health = 4 * projectileDamage as Health; // 4 times 
+export const normalModeHealth : Health = 2 * projectileDamage as Health; // 2 times 
+export const hardModeHealth: Health = 1 * projectileDamage as Health; // 1 time 
 
 export type Health = 0 | 50 | 100 | 200 ;
 
@@ -37,11 +41,11 @@ export type Health = 0 | 50 | 100 | 200 ;
 
 
 export const initialGameState : GameState = {
-    playerPosition: '150px',
+    playerPosition: 0.5, // init position to the center of the screen
     score: 0,
     highScore: 0,
     difficulty: Difficulty.normal,
-    projectileVelocity: 1,
+    projectileVelocity: Velocity.Slow,
     health: normalModeHealth as Health,
     lost: false 
 }

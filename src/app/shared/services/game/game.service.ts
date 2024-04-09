@@ -1,5 +1,5 @@
 import { Injectable, computed, signal } from '@angular/core';
-import { Difficulty, GameState, Health, Position, initialGameState, projectileDamage } from '../../../core/models/game';
+import { Difficulty, GameState, Health, initialGameState, projectileDamage } from '../../../core/models/game';
 import { GameInterface } from './gameInterface';
 
 @Injectable({
@@ -13,15 +13,10 @@ export class GameService implements GameInterface{
   constructor() { }
 
   inflictDamage(): void {
-    const currentHealth = this.sigGameState().health ;
-    const newHealth =  currentHealth - projectileDamage ;
-    if (newHealth < 0) {
-      throw new Error("health shouldn't be inferior to 0");
-    }
-    this._sigGameState.update((s)=>({...s,health: newHealth as Health}));
+   
   }
 
-  movePlayer(newPosition: Position): void {
+  movePlayer(newPosition: number): void {
       
   }
 
