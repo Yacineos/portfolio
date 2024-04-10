@@ -11,6 +11,7 @@ describe('GameService', () => {
       providers:[GameService]
     });
     service = TestBed.inject(GameService);
+    jest.clearAllMocks(); // Clear mocks to prevent state leakage between tests
   });
 
   it('should be created', () => {
@@ -96,7 +97,6 @@ describe('GameService', () => {
 
       expect(() => service.setHighScore()).toThrow('the current score is not superior to the current high score ');
 
-      jest.clearAllMocks();
 
     });
   });
@@ -120,41 +120,27 @@ describe('GameService', () => {
     });
     it('should correctly increase from medium to fast', ()=> {
       jest.spyOn(service, 'sigGameState').mockImplementation(() => ({
-        playerPosition: 0.5,
-        score: 50, // current score
-        highScore: 100, // current high score
-        difficulty: Difficulty.normal,
+        ...initialGameState,
         projectileVelocity: Velocity.Medium,
-        health: 100,
-        lost: false,
       }));
       service.increaseProjectilesVelocity();
       expect(service.sigGameState().projectileVelocity).toEqual(Velocity.Fast);
     });
     it('should correctly increase from fast to light', ()=> {  
       jest.spyOn(service, 'sigGameState').mockImplementation(() => ({
-        playerPosition: 0.5,
-        score: 50, // current score
-        highScore: 100, // current high score
-        difficulty: Difficulty.normal,
+        ...initialGameState,
         projectileVelocity: Velocity.Fast,
-        health: 100,
-        lost: false,
       }));
       service.increaseProjectilesVelocity();
       expect(service.sigGameState().projectileVelocity).toEqual(Velocity.Light);
+
     });
     it('should throw an error if we try to increase speed and the current is light and keep the current to light', ()=> {
       jest.spyOn(service, 'sigGameState').mockImplementation(() => ({
-        playerPosition: 0.5,
-        score: 50, // current score
-        highScore: 100, // current high score
-        difficulty: Difficulty.normal,
+        ...initialGameState,
         projectileVelocity: Velocity.Light,
-        health: 100,
-        lost: false,
       }));
-
+      
       expect(()=> {
         service.increaseProjectilesVelocity()
       }).toThrowError('cannot have a speed superior to Light');

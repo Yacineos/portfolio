@@ -3,7 +3,6 @@ import {
   Difficulty,
   GameState,
   Health,
-  Position,
 } from '../../../core/models/game';
 
 /* ---------------------------------------------------------------------------------------
