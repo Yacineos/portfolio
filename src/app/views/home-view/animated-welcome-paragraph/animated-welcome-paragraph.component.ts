@@ -22,7 +22,7 @@ export class AnimatedWelcomeParagraphComponent {
     this.shuffleParagraph();
   }
 
-  shuffleParagraph(){
+    shuffleParagraph(){
     if(this.shuffleInProgress) return ;
 
     this.shuffleInProgress = true ;

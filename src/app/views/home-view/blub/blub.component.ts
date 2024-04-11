@@ -9,6 +9,7 @@ import {
   OnDestroy,
   EffectRef,
   ChangeDetectionStrategy,
+  inject,
 } from '@angular/core';
 import { Coor } from '../../../core/models/coor';
 import { CommonModule } from '@angular/common';

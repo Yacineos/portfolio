@@ -3,6 +3,8 @@ import { AnimatedWelcomeParagraphComponent } from './animated-welcome-paragraph/
 import { BlubComponent } from './blub/blub.component';
 import { MouseTrackingService } from '../../shared/services/mouse-tracking.service';
 import { Coor } from '../../core/models/coor';
+import { AppearanceService } from '../../shared/services/appearance.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
     selector: 'app-home-view',
@@ -10,7 +12,7 @@ import { Coor } from '../../core/models/coor';
     templateUrl: './home-view.component.html',
     styleUrl: './home-view.component.css',
     changeDetection: ChangeDetectionStrategy.OnPush,
-    imports: [AnimatedWelcomeParagraphComponent, BlubComponent]
+    imports: [AnimatedWelcomeParagraphComponent, BlubComponent, CommonModule]
 })
 export class HomeViewComponent {
   
@@ -18,7 +20,7 @@ export class HomeViewComponent {
   readonly sigMouseCoor = computed<Coor>(() => this._sigMouseCoor()); 
 
   
-  constructor(private mouseService: MouseTrackingService){
+  constructor(private mouseService: MouseTrackingService , protected appearanceService: AppearanceService){
    
   }
 

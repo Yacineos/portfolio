@@ -8,7 +8,7 @@
   export class GameService implements GameInterface{
 
     private readonly _sigGameState = signal<GameState>(initialGameState);
-    readonly sigGameState = computed<GameState>(()=> this._sigGameState());
+    readonly sigGameState = computed<GameState>(()=>this._sigGameState());
 
     constructor() { }
 
@@ -43,13 +43,19 @@
       if(this.sigGameState().projectileVelocity === Velocity.Light){
         throw Error('cannot have a speed superior to Light');
       }
+      if(this.sigGameState().projectileVelocity === Velocity.Fast){
+        this._sigGameState.update((gs)=> ({
+          ...gs,
+          projectileVelocity: Velocity.Light
+        }));
+        return ;
+      }
 
       if(this.sigGameState().projectileVelocity === Velocity.Slow){
         this._sigGameState.update((gs)=> ({
           ...gs,
           projectileVelocity: Velocity.Medium
         }));
-        setInterval(()=> {},1000);
         return ;
       }
       if(this.sigGameState().projectileVelocity === Velocity.Medium){
@@ -59,17 +65,9 @@
         }));
         console.log(this._sigGameState().projectileVelocity);
         console.log(this.sigGameState().projectileVelocity);
-        setInterval(()=> {},1000);
         return ;
       }
-      if(this.sigGameState().projectileVelocity === Velocity.Fast){
-        this._sigGameState.update((gs)=> ({
-          ...gs,
-          projectileVelocity: Velocity.Light
-        }));
-        setInterval(()=> {},1000);
-        return ;
-      }
+      
     }
 
     setDifficulty(difficulty: Difficulty): void {
