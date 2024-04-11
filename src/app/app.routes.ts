@@ -28,6 +28,10 @@ export const routes: Routes = [
         loadComponent: () => import('./views/auth/auth.component').then(m => m.AuthComponent)
     },
     {
+        path: 'game',
+        loadComponent: () => import('./views/game/game.component').then(m => m.GameComponent)
+    },
+    {
         path:'**',
         component: PageNotFoundComponent
     }

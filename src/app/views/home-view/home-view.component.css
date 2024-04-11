@@ -23,12 +23,20 @@
 }
 
 @media (max-width: 768px) {
-    .blured-background{
+    .blured-background-dark-mode{
         position: absolute;
         width: 100vw;
         min-height: 100vh;
         min-height: 100svh;
         z-index: 2;
         backdrop-filter: blur(40px);
+    }
+    .blured-background-white-mode{
+        position: absolute;
+        width: 100vw;
+        min-height: 100vh;
+        min-height: 100svh;
+        z-index: 2;
+        backdrop-filter: blur(30px);
     }
 }
