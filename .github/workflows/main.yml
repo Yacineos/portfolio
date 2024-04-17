@@ -23,4 +23,4 @@ jobs:
       run: npm install  # Installe les dépendances du projet
 
     - name: Run tests
-      run: npm test  # Exécute les tests
+      run: npm run test  # Exécute les tests
