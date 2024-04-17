@@ -23,17 +23,16 @@ body{
 }
 
 .gallery{
-    background-color: rgb(37, 35, 35);
     width: 100%;
     height: 70svh;
     display: grid;
-    grid-template-columns: repeat(4, 40%);
+    grid-template-columns: repeat(4, 35%);
     overflow: scroll;
     cursor: grab;
 }
 
 .tile{
-    max-width: 450px;
+    max-width: 550px;
     width: 100%;
     overflow: hidden;
 }
@@ -54,4 +53,15 @@ body{
 
 .tile:hover{
     padding: 10px;
+}
+
+@media (max-width: 768px) {
+    .gallery{
+        width: 100%;
+        height: 70svh;
+        display: grid;
+        grid-template-columns: repeat(4, 95%);
+        overflow: scroll;
+        cursor: grab;
+    }    
 }

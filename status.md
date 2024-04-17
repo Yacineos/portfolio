@@ -4,6 +4,7 @@
         * double click effect
         * drag effect 
         * teach users ?!
+        * test
     * create the mobile navbar
         * inspiration for buttons animation on desktop  
     * button light mode / dark mode
