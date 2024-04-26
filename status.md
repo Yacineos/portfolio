@@ -1,19 +1,8 @@
-# TODO
-    * create the projects view (find a solution for mobile) 
-        * place some tiles on the screen randomly ( mobile ??)
-        * double click effect
-        * drag effect 
-        * teach users ?!
-        * test
-    * create the mobile navbar
-        * inspiration for buttons animation on desktop  
-    * button light mode / dark mode
-    * find a good font
+# TODO  
     * add english/french 
     * a bad ass 404 not found mini game ( avoid the projectiles ? every level increase projectiles speed and frequency )
-        * define Velocity type 
 # BLOCKED
-    * add jest to implement service tests  
+      
 # DONE
     * set up the project
     * implement bulb following cursor

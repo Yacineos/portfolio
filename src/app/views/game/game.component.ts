@@ -23,4 +23,6 @@ export class GameComponent {
     this.gameService.movePlayer((event.touches[0].clientX)/this.windowWidth);
   }
 
+  
+
 }

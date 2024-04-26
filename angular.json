@@ -82,9 +82,6 @@
             "polyfills": [
               "zone.js",
               "zone.js/testing"
-            ],
-            "modulePathIgnorePatterns": [
-              "<rootDir>/projects/my-favorite-library/"
             ]
           }
         }

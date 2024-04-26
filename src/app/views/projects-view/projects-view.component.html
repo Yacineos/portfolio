@@ -5,11 +5,9 @@
             <button>></button>
         </div>
         <div class="gallery">
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
+            <div class="tile" *ngFor="let project of projects_mock">
+                <app-tile [projectDescription]="project.description" [projectTitle]="project.title" [projectImageUrl]="project.imageUrl" ></app-tile>
+            </div>    
         </div>
-    </div>
+        </div>
 </body>
-
